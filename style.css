@@ -1,0 +1,186 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(C:\Users\Ramkrishna\Desktop\ambani\NovaSquare-Regular.ttf);
+  }
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color: lightcyan;
+    overflow-x: hidden;
+  
+}
+#intro{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+}
+#title{
+    margin-left: -5px;
+    padding-left: 0px;
+    font-size: 26px;
+    height:6vh;
+    width:100%;
+    margin-left: 0px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 1px 1px 2px blueviolet;
+    color:black;
+    position:absolute;
+    top:10px;
+    left:15px;
+  // border:2px solid pink;
+   padding:10px;
+   margin-bottom: 20px;
+   letter-spacing: 3px;
+   background: linear-gradient(to right,#a0d2eb,#e5eaf5,#d0bdf4,#8458B3,#a28089);
+    }
+
+#pichead{
+    border:2px solid white;
+    border-radius: 15px;
+  
+    position:absolute;
+    top:80px;
+    margin:10px;
+    padding:2px;
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    background:white;
+    height:50vh;
+    width:80%;
+    background-color:white;
+   box-shadow:  0 0 10px 2px rgba(0, 0, 0, 0.2), 0 0 20px 5px rgba(0, 0, 0, 0.3);
+}
+#pichead h2{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+#pichead img{
+    max-width: 100%;
+    height:70%;
+    width:auto;
+    border-radius:50%;
+    display:auto;
+    margin:auto;
+}
+#totalmoney{
+    border:2px solid greenyellow;
+    padding:3px;
+    margin-top:500px;
+    background-color: greenyellow;
+    text-align: center;
+    width:80%;
+    left:20%;
+    border-radius: 15px;
+   box-shadow:  0 0 10px 2px rgba(0, 0, 0, 0.2), 0 0 20px 5px rgba(0, 0, 0, 0.3);
+
+}
+#products{
+    border :2px solid transparent;
+    box-shadow:0 0 10px 2px rgba(0, 0, 0, 0.2), 0 0 20px 5px rgba(0, 0, 0, 0.3);
+    width:80%;
+    background-color: white;
+    margin-top:30px;
+    margin-left:10%;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+    padding:10px;
+    padding-top:20px;
+    padding-left:4px;
+    text-align: center;
+    border-radius: 15px;
+    
+     
+    
+}
+#products div{
+    border:2px solid transparent;
+    padding:10px;
+    margin: 5px;
+    border-radius: 7px;
+   
+}
+
+#products div img{
+    width:50%;
+    height:50%;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    box-shadow:0 0 10px 2px rgba(0, 0, 0, 0.2), 0 0 20px 5px rgba(0, 0, 0, 0.3);
+
+}
+
+#products div h1{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#products div button{
+    border-radius: 5px;
+    color:black;
+    width:90px;
+}
+#products div input{
+    border-radius: 2px;
+    color:black;
+    background-color: aliceblue;
+   
+}
+#products div button:hover{
+    background: greenyellow;
+}
+
+#products div button:first-of-type:hover{
+    background: red;
+
+}
+
+#products div button{
+    background: rgb(182, 182, 244);
+    border-radius: 2px;
+    color: black;
+}
+
+#endgame{
+    margin-bottom: 20px;
+    display: flex;
+    margin-top: 50px;
+    width:83%;
+    background-color: whitesmoke;
+    border:2px solid transparent;
+    border-radius: 15px;
+    margin-left: 10%;
+    justify-content: space-evenly;
+   box-shadow:  0 0 10px 2px rgba(0, 0, 0, 0.2), 0 0 20px 5px rgba(0, 0, 0, 0.3);
+
+}
+#endgame button{
+    width: 100px; /* Adjust width to increase button size */
+    height: 50px;
+    margin:5px;
+    /* text-align: center; */
+    color:black;
+    background-color: aliceblue ;
+    border-radius: 10px;
+    border: 2px solid gray;
+    
+}
+#yup{
+    padding-top: 9px;
+}
+@media screen and (max-width: 768px) {
+    #products,#intro {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Media query for even smaller screens */
+@media screen and (max-width: 480px) {
+    #products ,#intro{
+        grid-template-columns: 1fr;
+    }
+}
