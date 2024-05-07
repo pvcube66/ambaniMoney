@@ -13,7 +13,7 @@ let amazon=parseInt(document.getElementById('amazon').innerText.split('\n')[1]);
 
 let netflix=parseInt(document.getElementById('netflix').innerText.split('\n')[1]);
 let jordan=parseInt(document.getElementById('jordan').innerText.split('\n')[1]);
-let airpods=parseInt(document.getElementById('airpods').innerText.split('\n')[1]);
+let airpods=parseInt(document.getElementById('airpods').innerText.split('\n')[1]); 
 let gaming=parseInt(document.getElementById('gaming').innerText.split('\n')[1]);
 let drone=parseInt(document.getElementById('drone').innerText.split('\n')[1]);
 let phone=parseInt(document.getElementById('phone').innerText.split('\n')[1]);
@@ -124,24 +124,6 @@ function buy(item, price) {
 //     input.value = "";
 // }
 
-function buy(item, price) {
-    let totalMoneyElement = document.getElementById('totalmoney');
-    let totalMoneyText = totalMoneyElement.innerText;
-    let startIndex = totalMoneyText.search(/\d/);
-    let currentTotal = parseFloat(totalMoneyText.slice(startIndex));
-
-    console.log(currentTotal)
-    if (currentTotal >= price) {
-        let newTotal = currentTotal - price;
-        totalMoneyElement.innerText = newTotal;
-       
-        boughtItems[item]++;
-        console.log(item + " bought. Quantity: " + boughtItems[item]);
-    } else {
-        alert("Insufficient amount");
-    }
-}
-
 
 // Function to sell an item
 function sell(item, price) {
@@ -160,10 +142,16 @@ function sell(item, price) {
     }
 }
 
+let amount = 7653480000000;
+let quantity;
 
-
-
-
+function buy(inputId, price) {
+    let quantity = document.getElementById(inputId).value;
+    let amount = parseFloat(document.getElementById("H2").textContent.replace("NET WORTH : ₹", ""));
+    quantity = Number(quantity);
+    amount -= quantity * price;
+    document.getElementById("H2").textContent = `NET WORTH : ₹${amount}`;
+}
 
 
 
