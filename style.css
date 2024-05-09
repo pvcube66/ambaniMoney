@@ -17,10 +17,18 @@ body{
     justify-content: center;
     position:relative;
 }
+input{
+    text-align: center;
+    border : 2px solid black;
+    outline: none;
+    font-family: myFirstFont;
+}
 #title{
+    display: block;
     margin-left: -5px;
     padding-left: 0px;
     font-size: 26px;
+    text-align: center;
     height:6vh;
     width:100%;
     margin-left: 0px;
@@ -128,10 +136,10 @@ body{
     border-radius: 2px;
     color:black;
     background-color: aliceblue;
-   
 }
 #products div button:hover{
     background: greenyellow;
+    transition: .8s;
 }
 
 #products div button:first-of-type:hover{
